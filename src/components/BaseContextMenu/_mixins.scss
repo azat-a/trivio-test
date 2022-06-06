@@ -1,0 +1,38 @@
+@mixin base-context-menu-width($width) {
+  .base-context-menu__hidden {
+    width: $width;
+  }
+}
+
+@mixin base-context-menu-height($height) {
+  .base-context-menu__hidden {
+    height: $height;
+  }
+}
+
+@mixin base-context-menu-position($position) {
+  .base-context-menu__hidden {
+    @if ($position == 'top-left') {
+      bottom: 100%;
+      right: 100%;
+    }
+    @if ($position == 'top-right') {
+      bottom: 100%;
+      left: 100%;
+    }
+    @if ($position == 'bottom-left') {
+      top: 100%;
+      right: 100%;
+    }
+    @if ($position == 'bottom-right') {
+      top: 100%;
+      left: 100%;
+    }
+  }
+}
+
+@mixin base-context-menu-margin($margin) {
+  .base-context-menu__hidden {
+    margin: $margin;
+  }
+}
