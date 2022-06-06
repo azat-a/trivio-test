@@ -108,7 +108,7 @@ export default {
   .base-icon__badge__number {
     width: 100%;
     height: 100%;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 60%;
     user-select: none;
     font-size: 10px;
