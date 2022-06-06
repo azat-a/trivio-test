@@ -12,7 +12,7 @@
       <BaseButton
       type="filled"
       :icon="favoriteIcon"
-      text="Избранное"/>
+      text="Favourites"/>
     </div>
 
     <div class="app-header__icon-list">
