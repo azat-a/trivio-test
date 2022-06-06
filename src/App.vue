@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import MainPage from '@/screens/MainPage.vue';
+import MainPage from '@/screens/MainPage';
 
 export default {
   name: 'App',
