@@ -1,0 +1,25 @@
+@mixin base-icon-size($size) {
+  width: $size;
+  height: $size;
+
+  .base-icon__icon svg {
+    width: $size;
+    height: $size;
+  }
+}
+
+@mixin base-icon-color($color) {
+  .base-icon__icon svg {
+    fill: $color;
+  }
+}
+
+@mixin base-icon-badge-color($color) {
+  .base-icon__badge__boolean {
+    background-color: $color;
+  }
+
+  .base-icon__badge__number {
+    color: $color;
+  }
+}
