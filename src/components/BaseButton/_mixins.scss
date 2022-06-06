@@ -1,0 +1,86 @@
+@use 'sass:color';
+@use 'components/BaseIcon/mixins' as *;
+
+@mixin base-button-color($color) {
+  .base-button__button--transparent {
+    background-color: transparent;
+    color: $color;
+
+    &:hover {
+      background-color: color.change($color, $lightness: 90%);
+    }
+    &:focus {
+      background-color: color.change($color, $lightness: 95%);
+    }
+    &:active {
+      background-color: color.change($color, $lightness: 80%);
+    }
+
+    .base-button__icon {
+      @include base-icon-color($color);
+    }
+  }
+
+  .base-button__button--outlined {
+    background-color: transparent;
+    color: $color;
+    border-color: $color;
+
+    &:hover {
+      background-color: color.change($color, $lightness: 90%);
+    }
+    &:focus {
+      background-color: color.change($color, $lightness: 95%);
+    }
+    &:active {
+      background-color: color.change($color, $lightness: 80%);
+    }
+
+    .base-button__icon {
+      @include base-icon-color($color);
+    }
+  }
+
+  .base-button__button--filled {
+    $contrast-color: color.adjust($color, $hue: 180deg, $lightness: 100);
+
+    background-color: $color;
+    border-color: $color;
+    color: $contrast-color;
+
+    &:hover {
+      background-color: color.change($color, $lightness: 40%);
+      border-color: color.change($color, $lightness: 40%);
+    }
+    &:focus {
+      background-color: color.change($color, $lightness: 30%);
+      border-color: color.change($color, $lightness: 30%);
+    }
+    &:active {
+      background-color: color.change($color, $lightness: 50%);
+      border-color: color.change($color, $lightness: 50%);
+    }
+
+    .base-button__icon {
+      @include base-icon-color($contrast-color);
+    }
+  }
+}
+
+@mixin base-button-text-color($color) {
+  .base-button {
+    color: $color;
+  }
+}
+
+@mixin base-button-icon-color($color) {
+  .base-button__icon {
+    @include base-icon-color($color !important);
+  }
+}
+
+@mixin base-button-text-transform($transform) {
+  .base-button__button {
+    text-transform: $transform;
+  }
+}
